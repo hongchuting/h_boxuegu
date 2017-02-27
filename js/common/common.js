@@ -3,4 +3,5 @@ define(['jquery'], function($) {
 		$(this).next().slideToggle();
 	});
 
+
 });

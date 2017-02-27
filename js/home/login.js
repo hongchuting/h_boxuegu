@@ -9,7 +9,7 @@ define(['jquery'], function($) {
                     location.href = '/'
                 }
             }
-        })
+        });
 
         return false;
     })

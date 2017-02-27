@@ -6,6 +6,7 @@ requirejs.config({
 
     paths: {
         jquery:'lib/jquery/jquery.min',
+        jqueryCookie:'lib/jquery-cookie/jquery.cookie',
         bootstrap:'lib/bootstrap/js/bootstrap.min',
         userList:'js/user/userList',
         userProfile:'js/user/userProfile',
@@ -38,51 +39,55 @@ require(['jquery', 'bootstrap', 'common']);
 
 (function(window) {
     var pathname = window.location.pathname;
-    switch(pathname){
-        case '/html/user/user_list.html':
-            require(['userList']);
-            break;
-        case '/html/user/user_profile.html':
-            require(['userProfile']);
-            break;
-        case '/html/home/login.html':
-            require(['login']);
-            break;
-        case '/html/home/repass.html':
-            require(['repass']);
-            break;
-        case '/html/home/settings.html':
-            require(['settings']);
-            break;
-        case '/html/teacher/teacher_add.html':
-            require(['teacherAdd']);
-            break;
-        case '/html/teacher/teacher_list.html':
-            require(['teacherList']);
-            break;
-        case '/html/course/add.html':
-            require(['courseAdd']);
-            break;
-        case '/html/course/add_step1.html':
-            require(['courseAddStep1']);
-            break;
-        case '/html/course/add_step2.html':
-            require(['courseAddStep2']);
-            break;
-        case '/html/course/add_step3.html':
-            require(['courseAddStep3']);
-            break;
-        case '/html/course/category.html':
-            require(['courseCategory']);
-            break;
-        case '/html/course/category_add.html':
-            require(['courseCategoryAdd']);
-            break;
-        case '/html/course/list.html':
-            require(['courseList']);
-            break;
-        case '/html/course/topic.html':
-            require(['courseTopic']);
-            break;
-    }
+    
+
+        switch(pathname){
+            case '/html/user/user_list.html':
+                require(['userList']);
+                break;
+            case '/html/user/user_profile.html':
+                require(['userProfile']);
+                break;
+            case '/html/home/login.html':
+                require(['login']);
+                break;
+            case '/html/home/repass.html':
+                require(['repass']);
+                break;
+            case '/html/home/settings.html':
+                require(['settings']);
+                break;
+            case '/html/teacher/teacher_add.html':
+                require(['teacherAdd']);
+                break;
+            case '/html/teacher/teacher_list.html':
+                require(['teacherList']);
+                break;
+            case '/html/course/add.html':
+                require(['courseAdd']);
+                break;
+            case '/html/course/add_step1.html':
+                require(['courseAddStep1']);
+                break;
+            case '/html/course/add_step2.html':
+                require(['courseAddStep2']);
+                break;
+            case '/html/course/add_step3.html':
+                require(['courseAddStep3']);
+                break;
+            case '/html/course/category.html':
+                require(['courseCategory']);
+                break;
+            case '/html/course/category_add.html':
+                require(['courseCategoryAdd']);
+                break;
+            case '/html/course/list.html':
+                require(['courseList']);
+                break;
+            case '/html/course/topic.html':
+                require(['courseTopic']);
+                break;
+        }
+    });
+
 })(window);
